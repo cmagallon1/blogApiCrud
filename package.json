@@ -1,0 +1,28 @@
+{
+  "name": "blogApiCRUDApp",
+  "version": "1.0.0",
+  "description": "Test React Native CRUD Api app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlos8520/blogApiCRUDApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlos8520/blogApiCRUDApp/issues"
+  },
+  "homepage": "https://github.com/carlos8520/blogApiCRUDApp#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4",
+    "pg": "^8.3.0",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.3.3",
+    "sequelize-cli": "^6.2.0"
+  }
+}

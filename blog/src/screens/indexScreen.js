@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import {
   View,
   Text,
@@ -11,6 +11,7 @@ import { Feather } from "@expo/vector-icons";
 
 const IndexScreen = ({ navigation }) => {
   const { state, deleteBlogPost, getBlogPosts } = useContext(Context);
+  const [stateBlogs, setState] = useState({ blogs: [] });
 
   useEffect(() => {
     getBlogPosts();
@@ -24,10 +25,16 @@ const IndexScreen = ({ navigation }) => {
     };
   }, []);
 
+  useEffect(() => {
+    fetch('http://localhost:3000/find', (res) => {
+      setState((prevState) => ({ ...prevState, blogs: res }))
+    });
+  });
+
   return (
     <View>
       <FlatList
-        data={state}
+        data={stateBlogs.blogs}
         keyExtractor={(blogPost) => blogPost.title}
         renderItem={({ item }) => {
           return (

@@ -1,3 +1,9 @@
 {
-  "blogposts": []
+  "blogposts": [
+    {
+      "title": "Cesar",
+      "content": "Hola cómo estás",
+      "id": 1
+    }
+  ]
 }
